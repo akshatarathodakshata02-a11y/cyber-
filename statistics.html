@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Cyber Attack Statistics</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<h1>Cyber Security Attack Statistics</h1>
+
+<h2>Pie Chart</h2>
+<canvas id="pieChart"></canvas>
+
+<br><br>
+
+<h2>Bar Chart</h2>
+<canvas id="barChart"></canvas>
+
+<br><br>
+
+<h2>Line Chart</h2>
+<canvas id="lineChart"></canvas>
+
+<script>
+
+var pie = new Chart(document.getElementById("pieChart"), {
+type: "pie",
+
+data: {
+
+labels: [
+"Phishing",
+"Malware",
+"Ransomware",
+"DDoS",
+"Social Engineering"
+],
+
+datasets: [{
+
+data: [36,25,18,12,9],
+
+backgroundColor: [
+"red",
+"blue",
+"green",
+"orange",
+"purple"
+]
+
+}]
+
+}
+
+});
+
+
+var bar = new Chart(document.getElementById("barChart"), {
+
+type: "bar",
+
+data: {
+
+labels: [
+"Phishing",
+"Malware",
+"Ransomware",
+"DDoS",
+"Social Engineering"
+],
+
+datasets: [{
+
+label: "Attack Percentage",
+
+data: [36,25,18,12,9],
+
+backgroundColor: "blue"
+
+}]
+
+}
+
+});
+
+
+var line = new Chart(document.getElementById("lineChart"), {
+
+type: "line",
+
+data: {
+
+labels: [
+"2019",
+"2020",
+"2021",
+"2022",
+"2023"
+],
+
+datasets: [{
+
+label: "Cyber Attacks Growth",
+
+data: [20,30,45,60,80],
+
+borderColor: "red",
+
+fill: false
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

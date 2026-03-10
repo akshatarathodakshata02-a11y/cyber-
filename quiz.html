@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Cyber Security Quiz</title>
+
+<script>
+
+function checkQuiz() {
+
+var score = 0;
+
+var q1 = document.querySelector('input[name="q1"]:checked');
+var q2 = document.querySelector('input[name="q2"]:checked');
+var q3 = document.querySelector('input[name="q3"]:checked');
+
+if(q1 && q1.value == "correct") score++;
+if(q2 && q2.value == "correct") score++;
+if(q3 && q3.value == "correct") score++;
+
+document.getElementById("result").innerHTML =
+"Your Score: " + score + " / 3";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Cyber Security Quiz</h1>
+
+<p>1) What is phishing?</p>
+
+<input type="radio" name="q1" value="correct"> Fake email to steal data<br>
+<input type="radio" name="q1" value="wrong"> Internet problem<br>
+<input type="radio" name="q1" value="wrong"> Computer update<br><br>
+
+
+<p>2) Which password is strong?</p>
+
+<input type="radio" name="q2" value="wrong"> 123456<br>
+<input type="radio" name="q2" value="wrong"> password<br>
+<input type="radio" name="q2" value="correct"> Aks@1234<br><br>
+
+
+<p>3) What is malware?</p>
+
+<input type="radio" name="q3" value="wrong"> Security software<br>
+<input type="radio" name="q3" value="correct"> Virus that damages computer<br>
+<input type="radio" name="q3" value="wrong"> Internet connection<br><br>
+
+<button onclick="checkQuiz()">Submit Quiz</button>
+
+<h2 id="result"></h2>
+
+</body>
+</html>
